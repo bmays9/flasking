@@ -1,13 +1,14 @@
 import os
-from flask import Flask //import Flask Class
+from flask import Flask, render_template # import Flask Class
 
 
-app = Flask(__name__) // using the class, calling it app. 
+app = Flask(__name__)  # using the class, calling it app. 
 
 
 @app.route("/")
 def index():
-    return "Hello, World"
+    return render_template("index.html")
+
 
 
 if __name__ == "__main__":
